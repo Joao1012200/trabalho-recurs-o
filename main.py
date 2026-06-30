@@ -45,7 +45,7 @@ def fatorial(n):
 
 # Criar janela
 janela = tk.Tk()
-janela.title("Mini Calculadora")
+janela.title("Recursividade")
 janela.geometry("500x400")
 
 # Aplicar tema ttk
@@ -65,7 +65,7 @@ style.configure("TLabel",
                 foreground="#2c3e50")
 
 # Título
-titulo = ttk.Label(janela, text="Mini Calculadora",
+titulo = ttk.Label(janela, text="Recursividade",
                    font=("Arial", 20, "bold"), foreground="#34495e")
 titulo.pack(pady=20)
 
