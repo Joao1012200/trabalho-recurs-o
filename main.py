@@ -19,17 +19,29 @@ def calcular():
     except ValueError:
         label_resultado.config(text="Entrada inválida!")
 
-def fatorial(n):
-    f = 1
-    for i in range(1, n+1):
-        f *= i
-    return f
+def decimal_para_binario(n):
+    # Caso base
+    if n < 2:
+        return str(n)
+    else:
+        # Passo recursivo: chama a função para n // 2 e concatena o resto
+        return decimal_para_binario(n // 2) + str(n % 2)
 
 def inverter_string(s):
-    return s[::-1]
+    # Caso base: string vazia ou com 1 caractere
+    if len(s) <= 1:
+        return s
+    else:
+        # Passo recursivo: inverte o restante e adiciona o primeiro caractere no final
+        return inverter_string(s[1:]) + s[0]
 
-def decimal_para_binario(decimal):
-    return bin(decimal)[2:]
+def fatorial(n):
+    # Caso base
+    if n == 0 or n == 1:
+        return 1
+    else:
+        # Passo recursivo: n * fatorial(n-1)
+        return n * fatorial(n - 1)
 
 # Criar janela
 janela = tk.Tk()
